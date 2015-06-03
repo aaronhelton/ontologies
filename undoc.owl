@@ -1,295 +1,296 @@
+<?xml version="1.0"?>
 <rdf:RDF xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-<!-- //Ontology declaration// -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<rdfs:label>United Nations Documentation Ontology</rdfs:label>
-</rdf:Description>
-<!-- //Classes// -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#MemberState">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a member state of the UN</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Organization">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes an organization within the UN, composed of member states</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Body">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a body within the UN, established by an Organization</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Session">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a session of the UN held by a body</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Agenda">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a session agenda</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#AgendaItem">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes an agenda item</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Official">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes the UN official who, at the behest of a body, writes a document</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-	<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Speech">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a speech given by a member state of the UN</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Vote">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a vote by a member state of the UN</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Resolution">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes resolution/decision or draft resolution/decision sponsored by a member state of the UN</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#Document">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes a document written by a UN official as the result of a decision/resolution</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#AgendaSubject">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:comment xml:lang="en">Denotes an agenda subject</rdfs:comment>
-	<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>	
-</rdf:Description>
-<!-- //Object Properties// -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#establishes">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<rdfs:label>establishes</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#establishedBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#establishedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<rdfs:label>established by</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#establishes"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#member">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<rdfs:label>has member</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOf"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#sponsors">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#MemberState"/>
-	<rdfs:label>sponsors</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#sponsoredBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#sponsoredBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:label>is sponsored by</rdfs:label>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#sponsors"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#elects">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<rdfs:label>elects</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOf"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#memberOf">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<rdfs:label>is member of</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#appoints">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<rdfs:label>appoints</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#appointedBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#appointedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<rdfs:label>is appointed by</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#appoints"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#recommends">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<rdfs:label>recommends</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#recommendedBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#recommendedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<rdfs:label>is recommended by</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#recommends"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#adopts">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<rdfs:label>adopts</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#adoptedBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#adoptedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<rdfs:label>is adopted by</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#adopts"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#writes">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<rdfs:label>writes</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Document"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#writtenBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#writtenBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
-	<rdfs:label>is written by</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#writes"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#makes">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<rdfs:label>makes speech</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Speech"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#madeBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#madeBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Speech"/>
-	<rdfs:label>is made by</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#makes"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#casts">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<rdfs:label>casts vote</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Vote"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#castBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#castBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Vote"/>
-	<rdfs:label>is cast by</rdfs:label>
-	<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#casts"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#reproducedIn">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc##"/>
-	<rdfs:label>is reproduced in</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Document"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#reproduces"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#reproduces">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
-	<rdfs:label>reproduces</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc##"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#reproducedIn"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#holds">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<rdfs:label>holds session</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Session"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#heldBy"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#heldBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Session"/>
-	<rdfs:label>is held by</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
-	<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#holds"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#agenda">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Session"/>
-	<rdfs:label>has agenda</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Agenda"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#agendaItem">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Agenda"/>
-	<rdfs:label>has agenda item</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#AgendaItem"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#agendaSubject">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#AgendaItem"/>
-	<rdfs:label>has agenda subject</rdfs:label>
-	<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
-<!-- This object property and the one following might be unnnecessary -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#becomes">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-	<rdfs:label>becomes resolution/decision</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#Resolution"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#originatesFrom">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Resolution"/>
-	<rdfs:label>originates from draft resolution/decision</rdfs:label>
-	<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
-</rdf:Description>
-<!-- consider dublin core here or use additional subjects to differentiate types -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#documentSubject">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"
-	<rdfs:label>has subject</rdfs:label>
-	<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
-<!-- //Datatype Properties// -->
-<!-- consider dublin core here -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#title">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:label>has title</rdfs:label>
-</rdf:Description>
-<rdf:Description rdf:about="http://ontology.un.org/undoc#symbol">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
-	<rdfs:label>has document symbol</rdfs:label>
-</rdf:Description>
-<!-- consider dublin core here -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#type">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:label>has type</rdfs:label>
-</rdf:Description>
-<!-- consider dublin core here: dc.dateIssued? -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#date">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:label>date</rdfs:label>
-</rdf:Description>
-<!-- Consider differentiating relationship types here; these are for relationships among documents... -->
-<rdf:Description rdf:about="http://ontology.un.org/undoc#hasRelated">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:label>has related document</rdfs:label>
-</rdf:Description>
+	<!-- //Ontology declaration// -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+		<rdfs:label>United Nations Documentation Ontology</rdfs:label>
+	</rdf:Description>
+	<!-- //Classes// -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#MemberState">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a member state of the UN</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Organization">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes an organization within the UN, composed of member states</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Body">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a body within the UN, established by an Organization</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Session">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a session of the UN held by a body</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Agenda">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a session agenda</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#AgendaItem">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes an agenda item</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Official">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes the UN official who, at the behest of a body, writes a document</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+		<rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Speech">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a speech given by a member state of the UN</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Vote">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a vote by a member state of the UN</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Resolution">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes resolution/decision or draft resolution/decision sponsored by a member state of the UN</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#Document">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes a document written by a UN official as the result of a decision/resolution</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#AgendaSubject">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+		<rdfs:comment xml:lang="en">Denotes an agenda subject</rdfs:comment>
+		<rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontology.un.org/undoc</rdfs:isDefinedBy>
+	</rdf:Description>
+	<!-- //Object Properties// -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#establishes">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<rdfs:label>establishes</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#establishedBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#establishedBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<rdfs:label>established by</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#establishes"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#member">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<rdfs:label>has member</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOf"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#sponsors">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#MemberState"/>
+		<rdfs:label>sponsors</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#sponsoredBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#sponsoredBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:label>is sponsored by</rdfs:label>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#sponsors"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#elects">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<rdfs:label>elects</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOf"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#memberOf">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:label>is member of</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#appoints">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<rdfs:label>appoints</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#appointedBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#appointedBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:label>is appointed by</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#appoints"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#recommends">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<rdfs:label>recommends</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#recommendedBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#recommendedBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<rdfs:label>is recommended by</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#recommends"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#adopts">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<rdfs:label>adopts</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#adoptedBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#adoptedBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<rdfs:label>is adopted by</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#adopts"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#writes">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:label>writes</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#writtenBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#writtenBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<rdfs:label>is written by</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#writes"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#makes">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:label>makes speech</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Speech"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#madeBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#madeBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Speech"/>
+		<rdfs:label>is made by</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#makes"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#casts">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<rdfs:label>casts vote</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Vote"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#castBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#castBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Vote"/>
+		<rdfs:label>is cast by</rdfs:label>
+		<rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#casts"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#reproducedIn">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc##"/>
+		<rdfs:label>is reproduced in</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#reproduces"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#reproduces">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<rdfs:label>reproduces</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc##"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#reproducedIn"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#holds">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<rdfs:label>holds session</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Session"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#heldBy"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#heldBy">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Session"/>
+		<rdfs:label>is held by</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#holds"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#agenda">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Session"/>
+		<rdfs:label>has agenda</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Agenda"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#agendaItem">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Agenda"/>
+		<rdfs:label>has agenda item</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#AgendaItem"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#agendaSubject">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#AgendaItem"/>
+		<rdfs:label>has agenda subject</rdfs:label>
+		<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	</rdf:Description>
+	<!-- This object property and the one following might be unnnecessary -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#becomes">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+		<rdfs:label>becomes resolution/decision</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Resolution"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#originatesFrom">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Resolution"/>
+		<rdfs:label>originates from draft resolution/decision</rdfs:label>
+		<rdfs:range rdf:resource="http://ontology.un.org/undoc#DraftResolution"/>
+	</rdf:Description>
+	<!-- consider dublin core here or use additional subjects to differentiate types -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#documentSubject">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<rdfs:label>has subject</rdfs:label>
+		<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	</rdf:Description>
+	<!-- //Datatype Properties// -->
+	<!-- consider dublin core here -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#title">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		<rdfs:label>has title</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#symbol">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Document"/>
+		<rdfs:label>has document symbol</rdfs:label>
+	</rdf:Description>
+	<!-- consider dublin core here -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#type">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		<rdfs:label>has type</rdfs:label>
+	</rdf:Description>
+	<!-- consider dublin core here: dc.dateIssued? -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#date">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		<rdfs:label>date</rdfs:label>
+	</rdf:Description>
+	<!-- Consider differentiating relationship types here; these are for relationships among documents... -->
+	<rdf:Description rdf:about="http://ontology.un.org/undoc#hasRelated">
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		<rdfs:label>has related document</rdfs:label>
+	</rdf:Description>
 </rdf:RDF>
