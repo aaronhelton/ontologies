@@ -86,14 +86,14 @@
 		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#MemberState"/>
 		<rdfs:label>is member of body</rdfs:label>
 		<rdfs:range rdf:resource="http://ontology.un.org/undoc#Body"/>
-		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#hasMemberState"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#hasElectedMemberState"/>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://ontology.un.org/undoc#hasElectedMemberState">
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
 		<rdfs:domain rdf:resource="http://ontology.un.org/undoc#Body"/>
 		<rdfs:label>has elected member state</rdfs:label>
 		<rdfs:range rdf:resource="http://ontology.un.org/undoc#MemberState"/>
-		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOfOrganization"/>
+		<owl:inverseOf rdf:resource="http://ontology.un.org/undoc#memberOfBody"/>
 	</rdf:Description>
 	<rdf:Description rdf:about="http://ontology.un.org/undoc#establishesBody">
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
