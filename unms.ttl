@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+
+unms: a owl:Ontology ;
+  dct:title "UN Member States Ontology"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "An ontology describing current and former UN Member States."@en .
+
+unms:MemberState a rdfs:Class , owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:label "Member State"@en ;
+  rdfs:comment "Current UN member state. Labels are of the following types: skos:prefLabel, skos:altLabel, and skos:hiddenLabel."@en .
+
+unms:joinDate a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:title "Join Date"@en ;
+  rdfs:description "Date this state was admitted to the UN."@en ;
+  rdfs:comment "A member state can have multiple join dates. For instance, Indonesia withdrew on 20 January 1965 and was readmitted on 28 September 1965. Thus it will have two join dates: its original date of 28 September 1950 and its rejoin date of 28 September 1965."@en .
+
+unms:disjoinDate a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:title "Disjoin Date"@en ;
+  rdfs:description "Date this state left the UN, e.g., because of dissolution, withdrawal, etc."@en ;
+  rdfs:comment "A member state can have multiple disjoin dates. See the comments for joinDate for an explanation."@en .
+
+unms:isCurrent a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:title "Is Current?"@en ;
+  rdfs:description "Denotes whether this is a current member state; can be inferred from examining joinDate and disjoinDate entries."@en ;
+  rdfs:comment "While this could be automatically inferred, such analysis requires close examination of join/withdraw dates. The confounding factor is that each type of date may appear multiple times."@en .
+
+unms:founder a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:title "Is a founding member"@en ;
+  rdfs:description "Denotes whether this member state was a founding member of the UN."@en .
+
+unms:memberThrough a rdfs:Property , owl:ObjectProperty ;
+  rdfs:range unms:MemberState ;
+  rdfs:title "Denotes that current member inherited membership from a former member, e.g., Russian Federation from USSR."@en ;
+  rdfs:description "Represented in the UN as a former member. Ex: ns1:Serbia unms:formerMember ns1:Yugoslavia"@en .
