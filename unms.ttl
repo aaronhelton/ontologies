@@ -15,6 +15,23 @@ unms:MemberState a rdfs:Class , owl:Class ;
   rdfs:label "Member State"@en ;
   rdfs:comment "Current UN member state. Labels are of the following types: skos:prefLabel, skos:altLabel, and skos:hiddenLabel."@en .
 
+# With regard to labeling, I will need to make distinctions between changes in member state names unrelated to other 
+# membership issues (ExA) and changes resulting from member state dissolution and the creation of new states seeking 
+# membership (ExB, below).
+#
+# ExA: On 19 September 1991, the Byelorussian Soviet Socialist Republic informed the United Nations that it had changed 
+# its name to Belarus.
+
+# The following properties attempt to assert membership history/provenance regarding member states. It is an incomplete
+# model that lacks granularity. Ideally it should be able to adequately capture information sufficient to produce the 
+# list of member states in any given year. Such information is complicated enough that an event ontology may be more 
+# appropriate.
+#
+# ExB: The Union of Soviet Socialist Republics was an original Member of the United Nations from 24 October 1945.
+# In a letter dated 24 December 1991, Boris Yeltsin, the President of the Russian Federation, informed the Secretary-
+# General that the membership of the Soviet Union in the Security Council and all other United Nations organs was being 
+# continued by the Russian Federation with the support of the 11 member countries of the Commonwealth of Independent States.
+
 unms:joinDate a rdfs:Property , owl:DatatypeProperty ;
   rdfs:range rdfs:Literal ;
   rdfs:title "Join Date"@en ;
