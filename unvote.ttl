@@ -1,0 +1,71 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://repository.un.org/services/symbol/> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+
+# Things we want to assert:
+# unvote:VoteRecord dc:title "string"@en
+# unvote:VoteRecord unvote:resultRecord unvote:ResultRecord ??
+# unvote:VoteRecord unvote:meeting undoc:MeetingSymbol #somewhat like exactMatch, etc.
+# unvote:VoteRecord unvote:date "date"^^xsd:date
+# unvote:VoteRecord unvote:report undoc:ReportSymbol   #somewhat like exactMatch, etc.
+# unvote:VoteRecord unvote:symbol undoc:DocumentSymbol #somewhat like exactMatch, etc.
+# unvote:VoteRecord unvote:countryVote unvote:CountryVote
+# unvote:ResultRecord ?? ?? (possibilities include NV, A, Y, N, Total, with numeric values and "ADOPTED WITHOUT VOTE")
+# unvote:CountryVote unvote:castBy unms:MemberState #again like skos:exactMatch, etc.
+# unvote:CountryVote unvote:voteCharacter unvote:VoteCharacter #better as DatatypeProperty? Unclear.
+# e.g., unvote:VoteCharacter skos:prefLabel "A" 
+# e.g., unvote:VoteCharacter skos:altLabel "Abstained"
+
+# Ontology
+
+unvote: a owl:Ontology ;
+  dct:title "UN Voting Database Ontology"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "An ontology for describing UN voting data."@en ;
+
+# OWL Classes
+
+unvote:VoteRecord a rdfs:Class , owl:Class ;
+  rdfs:title "Vote Record"@en .
+
+unvote:ResultRecord a rdfs:Class , owl:Class ;
+  rdfs:title "Result Record"@en .
+
+unvote:CountryVote a rdfs:Class , owl:Class ;
+  rdfs:title "Country Vote"@en .
+
+unvote:VoteCharacter a rdfs:Class , owl:Class ;
+  rdfs:title "Vote Characterization"@en .
+
+# OWL DatatypeProperties
+
+unvote:date a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:title "Vote Date" .
+
+# OWL ObjectProperties
+
+unvote:resultRecord a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Result Record"@en .
+  
+unvote:meeting a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Meeting Record"@en .
+
+unvote:report a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Report Record"@en .
+
+unvote:symbol a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Document Symbol"@en .
+  
+unvote:countryVote a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Individual Country Vote"@en .
+  
+unvote:castBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Vote Cast By"@en .
+  
+unvote:voteCharacter a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Vote Character"@en .
