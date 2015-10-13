@@ -15,7 +15,7 @@
 unsess: a owl:Ontology ;
   dct:title "UN Session Ontology"@en ;
   dct:contributor "Aaron Helton" ;
-  dct:description "An ontology describing sessions at the UN."@en ;
+  dct:description "An ontology describing sessions at the UN."@en .
 
 # OWL Classes
 
