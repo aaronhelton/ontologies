@@ -39,13 +39,23 @@ unvote:ResultRecord a rdfs:Class , owl:Class ;
 unvote:CountryVote a rdfs:Class , owl:Class ;
   rdfs:title "Country Vote"@en .
 
-unvote:VoteCharacter a rdfs:Class , owl:Class ;
-  rdfs:title "Vote Characterization"@en .
-
 # OWL DatatypeProperties
 
 unvote:date a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:domain unvote:VoteRecord ;
   rdfs:title "Vote Date" .
+  
+unvote:resultKey a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:domain unvote:ResultRecord ;
+  rdfs:title "Result Key"@en .
+  
+unvote:resultValue a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:domain unvote:ResultRecord ;
+  rdfs:title "Result Value"@en .
+  
+unvote:voteCharacter a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:domain unvote:CountryVote ;
+  rdfs:title "Has Vote Character"@en .
 
 # OWL ObjectProperties
 
@@ -88,8 +98,3 @@ unvote:castBy a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unvote:CountryVote ;
   rdfs:range unms:MemberState ;
   rdfs:title "Vote Cast By"@en .
-  
-unvote:voteCharacter a rdfs:Property , owl:ObjectProperty ;
-  rdfs:domain unvote:CountryVote ;
-  rdfs:range unvote:VoteCharacter ;
-  rdfs:title "Has Vote Character"@en .
