@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
-@prefix undoc: <http://repository.un.org/services/symbol/> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
 @prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
 
 # Things we want to assert:
@@ -50,22 +50,36 @@ unvote:date a rdfs:Property , owl:DatatypeProperty ;
 # OWL ObjectProperties
 
 unvote:resultRecord a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range unvote:ResultRecord ;
   rdfs:title "Has Result Record"@en .
   
 unvote:meeting a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range undoc:Meeting ;
   rdfs:title "Has Meeting Record"@en .
 
 unvote:report a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range undoc:Report ;
   rdfs:title "Has Report Record"@en .
 
 unvote:symbol a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range undoc:Symbol ;
   rdfs:title "Has Document Symbol"@en .
   
 unvote:countryVote a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range unvote:CountryVote ;
   rdfs:title "Has Individual Country Vote"@en .
   
 unvote:castBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:CountryVote ;
+  rdfs:range unms:MemberState ;
   rdfs:title "Vote Cast By"@en .
   
 unvote:voteCharacter a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:CountryVote ;
+  rdfs:range unvote:VoteCharacter ;
   rdfs:title "Has Vote Character"@en .
