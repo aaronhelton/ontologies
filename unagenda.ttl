@@ -1,0 +1,61 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+
+# Ontology
+
+unagenda: a owl:Ontology ;
+  dct:title "UN Agenda Ontology"@en ;
+  dct:creator "United Nations Dag Hammarskjöld Library"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "An ontology describing the parliamentary/voting structure of the UN."@en .
+
+# OWL Classes
+
+unagenda:Agenda a rdfs:Class , owl:Class ;
+  rdfs:subClassOf skos:ConceptScheme ;
+  rdfs:title "Agenda"@en ;
+  rdfs:description "An agenda."@en .
+  
+unagenda:AgendaItem a rdfs:Class , owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:title "Agenda Item"@en ;
+  rdfs:description "An agenda item."@en .
+  
+# OWL Annotation Properties
+
+unagenda:itemNumber a rdfs:Property , owl:AnnotationProperty ;
+  rdfs:domain unagenda:AgendaItem ;
+  rdfs:title "Agenda Item Number"@en ;
+  rdfs:description "The agenda item number used to identify the item."@en .
+  
+# OWL Datatype Properties
+
+unagenda:itemTitle a rdfs:Property , owl:DatatypeProperty ;
+  # It might be better to have xl-labels because agendas tend to be reused
+  rdfs:domain unagenda:AgendaItem ;
+  rdfs:subClassOf skos:prefLabel ;
+  rdfs:title "Agenda Item Title"@en ;
+  rdfs:description "The agenda item's title. These are re-used often from year to year."@en .
+
+# OWL Object Properties
+
+unagenda:agendaItem a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unagenda:Agenda ;
+  rdfs:range unagenda:AgendaItem ;
+  rdfs:title "Has Agenda Item"@en ;
+  rdfs:description "Denotes that the Agenda Items belonging to an Agenda."@en .
+  
+unagenda:itemSubject a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unagenda:AgendaItem ;
+  rdfs:range skos:Concept ;
+  rdfs:title "Agenda Item Subject"@en ;
+  rdfs:description "Subject(s) associated with this Agenda/Item."@en .
