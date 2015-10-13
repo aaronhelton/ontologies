@@ -22,10 +22,10 @@ unorg: a owl:Ontology ;
 unorg:Establishable a rdfs:Class , owl:Class ;
   rdfs:description "Superclass to allow fluid super/subsidiation between bodies and organizations."@en .
 
-unorg:Establisher a rdfs:Class , owl:Class .
+unorg:Establisher a rdfs:Class , owl:Class ;
   rdfs:description "Superclass to allow fluid super/subsidiation between bodies and organizations."@en .
   
-unorg:Joinable a rdfs:Class , owl:Class .
+unorg:Joinable a rdfs:Class , owl:Class ;
   rdfs:description "Superclass of things to which MemberStates can belong."@en .
 
 unorg:Organization a rdfs:Class , owl:Class ;
