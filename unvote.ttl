@@ -63,11 +63,21 @@ unvote:report a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unvote:VoteRecord ;
   rdfs:range undoc:Report ;
   rdfs:title "Has Report Record"@en .
+  
+unvote:resolution a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range undoc:Resolution ;
+  rdfs:title "Has Resolution Record"@en .
+  
+unvote:draft a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unvote:VoteRecord ;
+  rdfs:range undoc:Draft ;
+  rdfs:title "Has Draft Resolution Record"@en .
 
 unvote:symbol a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unvote:VoteRecord ;
   rdfs:range undoc:Symbol ;
-  rdfs:title "Has Document Symbol"@en .
+  rdfs:title "Has Other Document Symbol"@en .
   
 unvote:countryVote a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unvote:VoteRecord ;
