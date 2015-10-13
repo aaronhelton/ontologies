@@ -1,9 +1,6 @@
-# undoc
-United Nations Documentation Ontology
+United Nations Linked Data Ontologies
+======
 
-An ontology describing UN documents. This is anticipated to require significant additional development.
+Ontologies describing various UN linked data, including UN documents, voting records, and member states.
 
-External dependencies:
-
- * http://www.w3.org/TR/skos-reference/skos.rdf
- * http://www.w3.org/TR/skos-reference/skos-xl.rdf
+These are very much provisional and subject to intense development and redevelopment. As such, we assume no reponsibility for any risk or damage incurred by your use of them.
