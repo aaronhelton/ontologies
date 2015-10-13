@@ -21,8 +21,34 @@ unsess: a owl:Ontology ;
 
 unsess:Session a rdfs:Class , owl:Class ;
   rdfs:title "UN Session" ;
-  rdfs:description 
+  rdfs:description "A UN Session"@en .
 
 # OWL Datatype Properties
 
+unsess:place a rdfs:Property , owl:DatatypeProperty ;
+  # consider subclassing from a GIS ontology and linking to existing vocab
+  rdfs:title "Session Location"@en ;
+  rdfs:description "Where the session was located."@en ;
+  rdfs:domain unsess:Session .
+
+unsess:date a rdfs:Property , owl:DatatypeProperty ;
+  # this is probably unnecessary; could be handled entirely by dct:date
+  rdfs:title "Session Date"@en ;
+  rdfs:description "Date session took place."@en ;
+  rdfs:domain unsess:Session .
+
 # OWL Object Properties
+
+unsess:agenda a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unsess:Session ;
+  rdfs:range unagenda:Agenda ;
+  owl:inverseOf unsess:inSession ;
+  rdfs:title "Has Agenda"@en ;
+  rdfs:description "Denotes that a Session has one or more Agendas."@en .
+  
+unsess:inSession a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unagenda:Agenda ;
+  rdfs:range unsess:Session ;
+  owl:inverseOf unsess:agenda ;
+  rdfs:title "In Session"@en ;
+  rdfs:description "Denotes Session to which Agenda belongs."@en .
