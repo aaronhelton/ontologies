@@ -6,6 +6,9 @@
 @prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
 @prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
 @prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
 
 # Things we want to assert:
 # unvote:VoteRecord dc:title "string"@en
@@ -20,6 +23,10 @@
 # unvote:CountryVote unvote:castBy unms:MemberState #again like skos:exactMatch, etc.
 # unvote:CountryVote unvote:voteCharacter "votecharacter"^^rdfs:Literal
 # see sample.ttl in this repository for a limited implementation
+
+# Not implemented yet:
+# Session info: unvote:VoteRecord unvote:inSession ???:Session
+# Body info: unvote:VoteRecord unvote:inBody ???:Body
 
 # Ontology
 
