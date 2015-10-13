@@ -56,7 +56,7 @@ unorg:member a rdfs:Property , owl:ObjectProperty ;
   rdfs:range unms:MemberState ;
   owl:inverseOf unorg:memberOf .
   
-unorg:memberOf a rdfs, Property , owl:ObjectProperty ;
+unorg:memberOf a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unms:MemberState ;
   rdfs:range unorg:Joinable ;
   owl:inverseOf unorg:member .
