@@ -11,9 +11,9 @@
 
 :A67_V01 a unvote:VoteRecord ;
   unvote:date "20130628"^^xsd:date ;
-  unvote:meeting undoc:A/67/PV.90 ;
-  unvote:report undoc:A/67/901 ;
-  unvote:resolution undoc:A/RES/67/277 ;
+  unvote:meeting <http://repository.un.org/services/symbol/A/67/PV.90> ;
+  unvote:report <http://repository.un.org/services/symbol/A/67/901> ;
+  unvote:resolution <http://repository.un.org/services/symbol/A/RES/67/277> ;
   unvote:resultRecord unvote:A67_V01_Result_Total ;
   dct:title "Financing of the United Nations Mission in Liberia"@en .
   
@@ -24,9 +24,9 @@
 :A67_V02 a unvote:VoteRecord ;
   unvote:date "20121221"^^xsd:date ;
   dct:title "International migration and development"@en ;
-  unvote:meeting undoc:A/67/PV.61 ;
-  unvote:report undoc:A/67/439/Add.2 ;
-  unvote:resolution undoc:A/RES/67/219 ;
+  unvote:meeting <http://repository.un.org/services/symbol/A/67/PV.61> ;
+  unvote:report <http://repository.un.org/services/symbol/A/67/439/Add.2> ;
+  unvote:resolution <http://repository.un.org/services/symbol/A/RES/67/219> ;
   unvote:resultRecord unvote:A67_V02_Result_Total ;
   unvote:resultRecord unvote:A67_V02_Result_NotVoted ;
   unvote:resultRecord unvote:A67_V02_Result_Abstained ;
