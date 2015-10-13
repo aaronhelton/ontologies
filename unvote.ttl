@@ -26,7 +26,7 @@
 unvote: a owl:Ontology ;
   dct:title "UN Voting Database Ontology"@en ;
   dct:contributor "Aaron Helton" ;
-  dct:description "An ontology for describing UN voting data."@en ;
+  dct:description "An ontology for describing UN voting data."@en .
 
 # OWL Classes
 
