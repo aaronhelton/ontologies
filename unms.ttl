@@ -6,6 +6,10 @@
 @prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
 @prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
 @prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+
 
 # URI for prefix unms will be replaced by something permanently reachable. It will still appear throughout the 
 # document in a form that can be globally replaced when the time comes.
