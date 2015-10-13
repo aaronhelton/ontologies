@@ -27,6 +27,14 @@ undoc:Report a rdfs:Class , owl:Class ;
   rdfs:title "Report Record"@en ;
   rdfs:subClassOf undoc:Symbol .
   
+undoc:Resolution a rdfs:Class , owl:Class ;
+  rdfs:title "Resolution Record"@en ;
+  rdfs:subClassOf undoc:Symbol .
+  
+undoc:Draft a rdfs:Class , owl:Class ;
+  rdfs:title "Draft Resolution Record"@en ;
+  rdfs:subClassOf undoc:Symbol .
+  
 # OWL DatatypeProperties
 
 undoc:symbolBase a rdfs:Property , owl:DatatypeProperty ;
