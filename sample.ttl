@@ -5,7 +5,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
-@prefix undoc: <http://repository.un.org/services/symbol/> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
 @prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
 @prefix : <http://52.20.172.127:8000/skjold/> .
 
