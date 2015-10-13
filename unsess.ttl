@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+
+# Ontology
+
+unsess: a owl:Ontology ;
+  dct:title "UN Session Ontology"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "An ontology describing sessions at the UN."@en ;
+
+# OWL Classes
+
+unsess:Session a rdfs:Class , owl:Class ;
+  rdfs:title "UN Session" ;
+  rdfs:description 
+
+# OWL Datatype Properties
+
+# OWL Object Properties
