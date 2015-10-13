@@ -1,0 +1,40 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+
+# Ontology
+
+undoc: a owl:Ontology ;
+  dct:title "UN Document Ontology" ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "A light-weight document ontology, mostly a proxy."@en .
+
+# OWL Classes
+
+undoc:Symbol a rdfs:Class , owl:Class ;
+  rdfs:title "Document Symbol"@en .
+  
+undoc:Meeting a rdfs:Class , owl:Class ;
+  rdfs:title "Meeting Record"@en ;
+  rdfs:subClassOf undoc:Symbol .
+  
+undoc:Report a rdfs:Class , owl:Class ;
+  rdfs:title "Report Record"@en ;
+  rdfs:subClassOf undoc:Symbol .
+  
+# OWL DatatypeProperties
+
+undoc:symbolBase a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:title "DocSymbol Base URI"@en ;
+  rdfs:domain undoc:Symbol ;
+  rdfs:range rdfs:Literal .
+  
+undoc:symbolIdentifier a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:title "DocSymbol Identifier Part"@en ;
+  rdfs:domain undoc:Symbol ;
+  rdfs:range rdfs:Literal .
