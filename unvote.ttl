@@ -13,13 +13,13 @@
 # unvote:VoteRecord unvote:meeting undoc:MeetingSymbol #somewhat like exactMatch, etc.
 # unvote:VoteRecord unvote:date "date"^^xsd:date
 # unvote:VoteRecord unvote:report undoc:ReportSymbol   #somewhat like exactMatch, etc.
-# unvote:VoteRecord unvote:symbol undoc:DocumentSymbol #somewhat like exactMatch, etc.
+# unvote:VoteRecord unvote:resolution undoc:ResolutionSymbol #somewhat like exactMatch, etc.
 # unvote:VoteRecord unvote:countryVote unvote:CountryVote
-# unvote:ResultRecord ?? ?? (possibilities include NV, A, Y, N, Total, with numeric values and "ADOPTED WITHOUT VOTE")
+# unvote:ResultRecord unvote:resultKey "Total"@en
+# unvote:ResultRecord unvote:resultValue "193"^^rdfs:Literal
 # unvote:CountryVote unvote:castBy unms:MemberState #again like skos:exactMatch, etc.
-# unvote:CountryVote unvote:voteCharacter unvote:VoteCharacter #better as DatatypeProperty? Unclear.
-# e.g., unvote:VoteCharacter skos:prefLabel "A" 
-# e.g., unvote:VoteCharacter skos:altLabel "Abstained"
+# unvote:CountryVote unvote:voteCharacter "votecharacter"^^rdfs:Literal
+# see sample.ttl in this repository for a limited implementation
 
 # Ontology
 
