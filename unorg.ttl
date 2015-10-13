@@ -1,0 +1,102 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+
+# Ontology
+
+unorg: a owl:Ontology ;
+  dct:title "UN Organization Ontology"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:description "An ontology describing the parliamentary/voting structure of the UN."@en .
+
+# OWL Classes
+
+unorg:Establishable a rdfs:Class , owl:Class ;
+  rdfs:description "Superclass to allow fluid super/subsidiation between bodies and organizations."@en .
+
+unorg:Establisher a rdfs:Class , owl:Class .
+  rdfs:description "Superclass to allow fluid super/subsidiation between bodies and organizations."@en .
+  
+unorg:Joinable a rdfs:Class , owl:Class .
+  rdfs:description "Superclass of things to which MemberStates can belong."@en .
+
+unorg:Organization a rdfs:Class , owl:Class ;
+  rdfs:title "UN Organization"@en ;
+  rdfs:description "Root level container for the UN as an organization. There can be only one."@en ;
+  rdfs:subClassOf unorg:Establishable ;
+  rdfs:subClassOf unorg:Establisher ;
+  rdfs:subClassOf unorg:Joinable .
+  
+unorg:Body a rdfs:Class , owl:Class ;
+  rdfs:title "UN Body"@en ;
+  rdfs:description "Second level container for the UN bodies belonging to the Organization."@en ;
+  rdfs:subClassOf unorg:Establishable ;
+  rdfs:subClassOf unorg:Establisher ;
+  rdfs:subClassOf unorg:Joinable .
+  
+unorg:Official a rdfs:Class , owl:Class ;
+  rdfs:title "UN Official"@en .
+
+# OWL DataypeProperties
+# This set might be blank, relying instead on SKOS, DC, etc.
+
+# OWL ObjectProperties
+
+unorg:member a rdfs:Property , owl:ObjectProperty ;
+  # Members are accepted into the Organization but elected into Bodies, especially subsidiaries
+  rdfs:domain unorg:Joinable ;
+  rdfs:range unms:MemberState ;
+  owl:inverseOf unorg:memberOf .
+  
+unorg:memberOf a rdfs, Property , owl:ObjectProperty ;
+  rdfs:domain unms:MemberState ;
+  rdfs:range unorg:Joinable ;
+  owl:inverseOf unorg:member .
+  
+unorg:establishes a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unorg:Establisher ;
+  rdfs:range unorg:Establishable ;
+  owl:inverseOf unorg:establishedBy .
+
+unorg:establishedBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unorg:Establishable ;
+  rdfs:range unorg:Establisher ;
+  owl:inverseOf unorg:establishes .
+  
+unorg:appoints a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unorg:Body ;
+  rdfs:range unorg:Official ;
+  owl:inverseOf unorg:appointedBy .
+  
+unorg:appointedBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unorg:Official ;
+  rdfs:range unorg:Body ;
+  owl:inverseOf unorg:appoints .
+  
+unorg:sponsors a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unms:MemberState ;
+  rdfs:range udoc:Draft ;
+  owl:inverseOf unorg:sponsoredBy .
+  
+unorg:sponsoredBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain undoc:Draft ;
+  rdfs:range unms:MemberState ;
+  owl:inverseOf unorg:sponsors .
+  
+unorg:holds a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unorg:Body ;
+  rdfs:range unsess:Session ;
+  owl:inverseOf unorg:heldBy .
+
+unorg:heldBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:domain unsess:Session ;
+  rdfs:range unorg:Body ;
+  owl:inverseOf unorg:holds .
