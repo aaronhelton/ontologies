@@ -83,7 +83,7 @@ unorg:appointedBy a rdfs:Property , owl:ObjectProperty ;
   
 unorg:sponsors a rdfs:Property , owl:ObjectProperty ;
   rdfs:domain unms:MemberState ;
-  rdfs:range udoc:Draft ;
+  rdfs:range undoc:Draft ;
   owl:inverseOf unorg:sponsoredBy .
   
 unorg:sponsoredBy a rdfs:Property , owl:ObjectProperty ;
