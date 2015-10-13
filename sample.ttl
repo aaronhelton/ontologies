@@ -1,0 +1,65 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
+@prefix undoc: <http://repository.un.org/services/symbol/> .
+@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix : <http://52.20.172.127:8000/skjold/> .
+
+:A67_V01 a unvote:VoteRecord ;
+  unvote:date "20130628"^^xsd:date ;
+  unvote:meeting undoc:A/67/PV.90 ;
+  unvote:report undoc:A/67/901 ;
+  unvote:resolution undoc:A/RES/67/277 ;
+  unvote:resultRecord unvote:A67_V01_Result_Total ;
+  dct:title "Financing of the United Nations Mission in Liberia"@en .
+  
+:A67_V01_Result_Total a unvote:ResultRecord ;
+  unvote:resultKey "Total"@en ;
+  unvote:resultValue "ADOPTED WITHOUT VOTE"@en .
+  
+:A67_V02 a unvote:VoteRecord ;
+  unvote:date "20121221"^^xsd:date ;
+  dct:title "International migration and development"@en ;
+  unvote:meeting undoc:A/67/PV.61 ;
+  unvote:report undoc:A/67/439/Add.2 ;
+  unvote:resolution undoc:A/RES/67/219 ;
+  unvote:resultRecord unvote:A67_V02_Result_Total ;
+  unvote:resultRecord unvote:A67_V02_Result_NotVoted ;
+  unvote:resultRecord unvote:A67_V02_Result_Abstained ;
+  unvote:resultRecord unvote:A67_V02_Result_Yes ;
+  unvote:resultRecord unvote:A67_V02_Result_No ;
+  unvote:countryVote unvote:A67_V01_CV001 ;
+#abbreviated
+  unvote:countryVote unvote:A67_V01_CV193 .
+  
+:A67_V02_Result_Total a unvote:ResultRecord ;
+  unvote:resultKey "Total"@en ;
+  unvote:resultValue "193"^^rdfs:Literal .
+
+:A67_V02_Result_NotVoted a unvote:ResultRecord ;
+  unvote:resultKey "NV"@en ;
+  unvote:resultValue "12"^^rdfs:Literal .
+
+:A67_V02_Result_Abstained a unvote:ResultRecord ;
+  unvote:resultKey "A"@en ;
+  unvote:resultValue "49"^^rdfs:Literal .
+
+:A67_V02_Result_Yes a unvote:ResultRecord ;
+  unvote:resultKey "Y"@en ;
+  unvote:resultValue "129"^^rdfs:Literal .
+
+:A67_V02_Result_No a unvote:ResultRecord ;
+  unvote:resultKey "N"@en ;
+  unvote:resultValue "3"^^rdfs:Literal .
+
+:A67_V01_CV001 a unvote:CountryVote ;
+  unvote:castBy :UNITED_REPUBLIC_OF_TANZANIA ;
+  unvote:voteCharacter "Y"^^rdfs:Literal .
+
+:A67_V01_CV193 a unvote:CountryVote ;
+  unvote:castBy :MADAGASCAR ;
+  unvote:voteCharacter "NV"^^rdfs:Literal .
