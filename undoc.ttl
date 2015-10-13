@@ -6,6 +6,9 @@
 @prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
 @prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
 @prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
+@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
+@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
+@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
 
 # Ontology
 
@@ -46,3 +49,15 @@ undoc:symbolIdentifier a rdfs:Property , owl:DatatypeProperty ;
   rdfs:title "DocSymbol Identifier Part"@en ;
   rdfs:domain undoc:Symbol ;
   rdfs:range rdfs:Literal .
+  
+# OWL ObjectProperties
+
+undoc:sponsoredBy a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Sponsored By"@en ;
+  rdfs:domain undoc:Draft ;
+  rdfs:range unms:MemberState .
+  
+undoc:hasVoteRecord a rdfs:Property , owl:ObjectProperty ;
+  rdfs:title "Has Vote Record"@en ;
+  rdfs:domain undoc:Draft ;
+  rdfs:range unvote:VoteRecord .
