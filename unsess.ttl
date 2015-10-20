@@ -4,12 +4,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
-@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
-@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
-@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
-@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
-@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+@prefix unms: <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> .
+@prefix undoc: <http://unontologies.s3-website-us-east-1.amazonaws.com/undoc#> .
+@prefix unvote: <http://unontologies.s3-website-us-east-1.amazonaws.com/unvote#> .
+@prefix unorg: <http://unontologies.s3-website-us-east-1.amazonaws.com/unorg#> .
+@prefix unsess: <http://unontologies.s3-website-us-east-1.amazonaws.com/unsess#> .
+@prefix unagenda: <http://unontologies.s3-website-us-east-1.amazonaws.com/unagenda#> .
 
 # Ontology
 

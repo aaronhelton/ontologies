@@ -4,12 +4,12 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix unms: <http://52.20.172.127:8000/skjold/ontology/unms#> .
-@prefix undoc: <http://52.20.172.127:8000/skjold/ontology/undoc#> .
-@prefix unvote: <http://52.20.172.127:8000/skjold/ontology/unvote#> .
-@prefix unorg: <http://52.20.172.127:8000/skjold/ontology/unorg#> .
-@prefix unsess: <http://52.20.172.127:8000/skjold/ontology/unsess#> .
-@prefix unagenda: <http://52.20.172.127:8000/skjold/ontology/unagenda#> .
+@prefix unms: <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> .
+@prefix undoc: <http://unontologies.s3-website-us-east-1.amazonaws.com/undoc#> .
+@prefix unvote: <http://unontologies.s3-website-us-east-1.amazonaws.com/unvote#> .
+@prefix unorg: <http://unontologies.s3-website-us-east-1.amazonaws.com/unorg#> .
+@prefix unsess: <http://unontologies.s3-website-us-east-1.amazonaws.com/unsess#> .
+@prefix unagenda: <http://unontologies.s3-website-us-east-1.amazonaws.com/unagenda#> .
 
 
 # URI for prefix unms will be replaced by something permanently reachable. It will still appear throughout the 
@@ -23,65 +23,40 @@ unms: a owl:Ontology ;
 unms:MemberState a rdfs:Class , owl:Class ;
   rdfs:subClassOf skos:Concept ;
   rdfs:label "Member State"@en ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
-  rdfs:comment "Current UN member state. Labels are of the following types: skos:prefLabel, skos:altLabel, and \n
-  skos:hiddenLabel."@en .
-
-# With regard to labeling, I will need to make distinctions between changes in member state names unrelated to other 
-# membership issues (ExA) and changes resulting from member state dissolution and the creation of new states seeking 
-# membership (ExB, below).
-#
-# ExA: On 19 September 1991, the Byelorussian Soviet Socialist Republic informed the United Nations that it had changed 
-# its name to Belarus.
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
+  rdfs:comment "Current UN member state. Labels are of the following types: skos:prefLabel, skos:altLabel, and skos:hiddenLabel."@en .
 
 unms:priorLabel a rdfs:Property , owl:DatatypeProperty ;
   rdfs:subClassOf skos:prefLabel ;
   rdfs:title "Prior Label"@en ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
-  rdfs:description "Any prior label associated with the MemberState. This should be limited to cases where the name of \n
-  the country changed but the membership status otherwise stayed the same."@en ;
-  skos:example "Belarus changed its name in 1991 from the Byelorussian Soviet Socialist Republic. Thus its entry would \n
-  have been updated in 1991 such that skos:prefLabel \"Byelorussian Soviet Socialist Republic\"@en would change to \n
-  skos:prefLabel \"Belarus\"@en, and it would gain unms:priorLabel \"Byelorussian Soviet Socialist Republic\"@en."
-
-# The following properties attempt to assert membership history/provenance regarding member states. It is an incomplete
-# model that lacks granularity. Ideally it should be able to adequately capture information sufficient to produce the 
-# list of member states in any given year. Such information is complicated enough that an event ontology may be more 
-# appropriate.
-#
-# ExB: The Union of Soviet Socialist Republics was an original Member of the United Nations from 24 October 1945.
-# In a letter dated 24 December 1991, Boris Yeltsin, the President of the Russian Federation, informed the Secretary-
-# General that the membership of the Soviet Union in the Security Council and all other United Nations organs was being 
-# continued by the Russian Federation with the support of the 11 member countries of the Commonwealth of Independent States.
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
+  rdfs:description "Any prior label associated with the MemberState. This should be limited to cases where the name of the country changed but the membership status otherwise stayed the same."@en ;
+  skos:example "Belarus changed its name in 1991 from the Byelorussian Soviet Socialist Republic. Thus its entry would have been updated in 1991 such that skos:prefLabel \"Byelorussian Soviet Socialist Republic\"@en would change to skos:prefLabel \"Belarus\"@en, and it would gain unms:priorLabel \"Byelorussian Soviet Socialist Republic\"@en." .
 
 unms:joinDate a rdfs:Property , owl:DatatypeProperty ;
   rdfs:range rdfs:Literal ;
   rdfs:title "Join Date"@en ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
   rdfs:description "Date this state was admitted to the UN."@en ;
-  rdfs:comment "A member state can have multiple join dates. For instance, Indonesia withdrew on 20 January 1965 and \n
-  was readmitted on 28 September 1965. Thus it will have two join dates: its original date of 28 September 1950 and \n
-  its rejoin date of 28 September 1965."@en .
+  rdfs:comment "A member state can have multiple join dates. For instance, Indonesia withdrew on 20 January 1965 and was readmitted on 28 September 1965. Thus it will have two join dates: its original date of 28 September 1950 and its rejoin date of 28 September 1965."@en .
 
 unms:disjoinDate a rdfs:Property , owl:DatatypeProperty ;
   rdfs:range rdfs:Literal ;
   rdfs:title "Disjoin Date"@en ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
   rdfs:description "Date this state left the UN, e.g., because of dissolution, withdrawal, etc."@en ;
   rdfs:comment "A member state can have multiple disjoin dates. See the comments for joinDate for an explanation."@en .
 
 unms:isCurrent a rdfs:Property , owl:DatatypeProperty ;
   rdfs:range rdfs:Literal ;
   rdfs:title "Is Current?"@en ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
-  rdfs:description "Denotes whether this is a current member state; can be inferred from examining joinDate and \n
-  disjoinDate entries."@en ;
-  rdfs:comment "While this could be automatically inferred, such analysis requires close examination of \n
-  join/withdraw dates. The confounding factor is that each type of date may appear multiple times."@en .
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
+  rdfs:description "Denotes whether this is a current member state; can be inferred from examining joinDate and disjoinDate entries."@en ;
+  rdfs:comment "While this could be automatically inferred, such analysis requires close examination of join/withdraw dates. The confounding factor is that each type of date may appear multiple times."@en .
 
 unms:founder a rdfs:Property , owl:DatatypeProperty ;
   rdfs:range rdfs:Literal ;
-  rdfs:isDefinedBy <http://52.20.172.127:8000/skjold/ontology/unms#> ;
+  rdfs:isDefinedBy <http://unontologies.s3-website-us-east-1.amazonaws.com/unms#> ;
   rdfs:title "Is a founding member"@en ;
   rdfs:description "Denotes whether this member state was a founding member of the UN."@en .
 
