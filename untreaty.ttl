@@ -11,7 +11,7 @@ untreaty: a owl:Ontology ;
   dct:title "UN Treaties Ontology"@en ;
   dct:contributor "Aaron Helton" ;
   dct:contributor "Susan Kurtas" ;
-  dct:description "An ontology for the structural decomposition of UN treaties. A sample in the default namespace is included and covers the UN Charter."@en .
+  dct:description "An ontology for the structural decomposition of UN treaties. A sample in the default namespace is included and covers part of the UN Charter."@en .
 
 # Classes
 untreaty:Treaty a owl:Class .
@@ -84,6 +84,7 @@ untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
 	
 :PA1 a untreaty:Article ;
   skos:prefLabel "WE THE PEOPLES OF THE UNITED NATIONS DETERMINED"@en ;
+  skos:prefLabel "RÉSOLUS"@fr ;
   untreaty:partOrder 0 ;
   untreaty:hasPart :PA1P1 ;
   untreaty:hasPart :PA1P2 ;
@@ -92,22 +93,27 @@ untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
   
 :PA1P1 a untreaty:Paragraph ;
   untreaty:blockText "to save succeeding generations from the scourge of war, which twice in our lifetime has brought untold sorrow to mankind, and"@en ;
+  untreaty:blockText "à préserver les générations futures du fléau de la guerre qui deux fois en l'espace d'une vie humaine a infligé à l'humanité d'indicibles souffrances,"@fr ;
   untreaty:partOrder 0 .
 	
 :PA1P2 a untreaty:Paragraph ;
   untreaty:blockText "to reaffirm faith in fundamental human rights, in the dignity and worth of the human person, in the equal rights of men and women and of nations large and small, and"@en ;
+  untreaty:blockText "à proclamer à nouveau notre foi dans les droits fondamentaux de l'homme, dans la dignité et la valeur de la personne humaine, dans l'égalité de droits des hommes et des femmes, ainsi que des nations, grandes et petites,"@fr ;
   untreaty:partOrder 1 .
 
 :PA1P3 a untreaty:Paragraph ;
   untreaty:blockText "to establish conditions under which justice and respect for the obligations arising from treaties and other sources of international law can be maintained, and"@en ;
+  untreaty:blockText "à créer les conditions nécessaires au maintien de la justice et du respect des obligations nées des traités et autres sources du droit international,"@fr ;
   untreaty:partOrder 2 .
 
 :PA1P4 a untreaty:Paragraph ;
   untreaty:blockText "to promote social progress and better standards of life in larger freedom,"@en ;
+  untreaty:blockText "à favoriser le progrès social et instaurer de meilleures conditions de vie dans une liberté plus grande,"@fr ;
   untreaty:partOrder 3 .
   
 :PA2 a untreaty:Article ;
   skos:prefLabel "AND FOR THESE ENDS"@en ;
+  skos:prefLabel "ET À CES FINS"@fr ;
   untreaty:partOrder 1 ;
   untreaty:hasPart :PA2P1 ;
   untreaty:hasPart :PA2P2 ;
@@ -116,27 +122,33 @@ untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
   
 :PA2P1 a untreaty:Paragraph ;
   untreaty:blockText "to practice tolerance and live together in peace with one another as good neighbours, and"@en ;
+  untreaty:blockText "à pratiquer la tolérance, à vivre en paix l'un avec l'autre dans un esprit de bon voisinage,"@fr ;
   untreaty:partOrder 0 .
 
 :PA2P2 a untreaty:Paragraph ;  
   untreaty:blockText "to unite our strength to maintain international peace and security, and"@en ;
+  untreaty:blockText "à unir nos forces pour maintenir la paix et la sécurité internationales,"@fr ;
   untreaty:partOrder 1 .
 
 :PA2P3 a untreaty:Paragraph ;
   untreaty:blockText "to ensure, by the acceptance of principles and the institution of methods, that armed force shall not be used, save in the common interest, and"@en ;
+  untreaty:blockText "à accepter des principes et instituer des méthodes garantissant qu'il ne sera pas fait usage de la force des armes, sauf dans l'intérêt commun,"@fr ;
   untreaty:partOrder 2 .
 
 :PA2P4 a untreaty:Paragraph ;
   untreaty:blockText "to employ international machinery for the promotion of the economic and social advancement of all peoples,"@en ;
+  untreaty:blockText "à recourir aux institutions internationales pour favoriser le progrès économique et social de tous les peuples,"@fr ;
   untreaty:partOrder 3 .
 
 :PA3 a untreaty:Article ;
   skos:prefLabel "HAVE RESOLVED TO COMBINE OUR EFFORTS TO ACCOMPLISH THESE AIMS"@en ;
+  skos:prefLabel "AVONS DÉCIDÉ D'ASSOCIER NOS EFFORTS POUR RÉALISER CES DESSEINS"@fr ;
   untreaty:partOrder 2 ;
   untreaty:hasPart :PA3P1 .
   
 :PA3P1 a untreaty:Paragraph ;
-  untreaty:blockText "Accordingly, our respective Governments, through representatives assembled in the city of San Francisco, who have exhibited their full powers found to be in good and due form, have agreed to the present Charter of the United Nations and do hereby establish an international organization to be known as the United Nations."@en .
+  untreaty:blockText "Accordingly, our respective Governments, through representatives assembled in the city of San Francisco, who have exhibited their full powers found to be in good and due form, have agreed to the present Charter of the United Nations and do hereby establish an international organization to be known as the United Nations."@en ;
+  untreaty:blockText "en conséquence, nos gouvernements respectifs, par l'intermédiaire de leurs représentants, réunis en la ville de San Francisco, et munis de pleins pouvoirs reconnus en bonne et due forme, ont adopté la présente Charte des Nations Unies et établissent par les présentes une organisation internationale qui prendra le nom de Nations Unies."@fr ;
   untreaty:partOrder 0 .
 	
 :Chapter1 a untreaty:Chapter ;
