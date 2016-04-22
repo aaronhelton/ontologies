@@ -1,0 +1,163 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix untreaty: <http://ontologies.un.org/untreaty#> .
+@prefix : <http://unlod.un.org/untreaties/> .
+
+untreaty: a owl:Ontology ;
+  dct:title "UN Treaties Ontology"@en ;
+  dct:contributor "Aaron Helton" ;
+  dct:contributor "Susan Kurtas" ;
+  dct:description "An ontology for the structural decomposition of UN treaties. A sample in the default namespace is included and covers the UN Charter."@en .
+
+# Classes
+untreaty:Treaty a owl:Class .
+
+# arbitrarily nestable supertype; intended to be subclassed for more specific decomposition
+# there is a high likelihood that this is duplicative work
+untreaty:Part a owl:Class .
+
+untreaty:Chapter a owl:Class ;
+  rdfs:subClassOf untreaty:Part .
+	
+untreaty:Article a owl:Class ;
+  rdfs:subClassOf untreaty:Part .
+	
+untreaty:Paragraph a owl:Class ;
+  rdfs:subClassOf untreaty:Part .
+	
+untreaty:Preamble a owl:Class ;
+  rdfs:subClassOf untreatyPart .
+
+# Datatype Properties
+
+untreaty:blockText a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal .
+	
+untreaty:partOrder a rdfs:Property , owl:DatatypeProperty ;
+  rdfs:range rdfs:Literal .
+
+# Oject Properties
+
+untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
+  rdfs:range untreaty:Part .
+	
+#Instances
+
+:UNCharter a untreaty:Treaty ;
+  skos:prefLabel "Charter of the United Nations and Statute of the International Court of Justice"@en ;
+  skos:prefLabel "Charte des Nations Unies et Statut de la Cour Internationale de Justice"@fr ;
+  skos:note "The Charter of the United Nations was signed on 26 June 1945, in San Francisco, at the conclusion of the United Nations Conference on International Organization, and came into force on 24 October 1945. The Statute of the International Court of Justice is an integral part of the Charter."@en ;
+  skos:note "La Charte a été signée à San Francisco le 26 juin 1945, à la fin de la Conférence des Nations Unies pour l'Organisation internationale, et est entrée en vigueur le 24 octobre 1945. Le Statut de la Cour internationale de Justice fait partie intégrante de la Charte."@fr ;
+  untreaty:hasPart :Preamble ;
+  untreaty:hasPart :Chapter1 ;
+  untreaty:hasPart :Chapter2 ;
+  untreaty:hasPart :Chapter3 ;
+  untreaty:hasPart :Chapter4 ;
+  untreaty:hasPart :Chapter5 ;
+  untreaty:hasPart :Chapter6 ;
+  untreaty:hasPart :Chapter7 ;
+  untreaty:hasPart :Chapter8 ;
+  untreaty:hasPart :Chapter9 ;
+  untreaty:hasPart :Chapter10 ;
+  untreaty:hasPart :Chapter11 ;
+  untreaty:hasPart :Chapter12 ;
+  untreaty:hasPart :Chapter13 ;
+  untreaty:hasPart :Chapter14 ;
+  untreaty:hasPart :Chapter15 ;
+  untreaty:hasPart :Chapter16 ;
+  untreaty:hasPart :Chapter17 ;
+  untreaty:hasPart :Chapter18 ;
+  untreaty:hasPart :Chapter19 .
+
+# Preamble blockText might need to be further decomposed	
+:Preamble a untreaty:Preamble ;
+  skos:prefLabel "Preamble"@en ;
+  skos:prefLabel "Préambule"@fr ;
+  untreaty:partOrder 0 ;
+  untreaty:hasPart :PA1 ;
+  untreaty:hasPart :PA2 ;
+  untreaty:hasPart :PA3 .
+	
+:PA1 a untreaty:Article ;
+  skos:prefLabel "WE THE PEOPLES OF THE UNITED NATIONS DETERMINED"@en ;
+  untreaty:partOrder 0 ;
+  untreaty:hasPart :PA1P1 ;
+  untreaty:hasPart :PA1P2 ;
+  untreaty:hasPart :PA1P3 ;
+  untreaty:hasPart :PA1P4 .
+  
+:PA1P1 a untreaty:Paragraph ;
+  untreaty:blockText "to save succeeding generations from the scourge of war, which twice in our lifetime has brought untold sorrow to mankind, and"@en ;
+  untreaty:partOrder 0 .
+	
+:PA1P2 a untreaty:Paragraph ;
+  untreaty:blockText "to reaffirm faith in fundamental human rights, in the dignity and worth of the human person, in the equal rights of men and women and of nations large and small, and"@en ;
+  untreaty:partOrder 1 .
+
+:PA1P3 a untreaty:Paragraph ;
+  untreaty:blockText "to establish conditions under which justice and respect for the obligations arising from treaties and other sources of international law can be maintained, and"@en ;
+  untreaty:partOrder 2 .
+
+:PA1P4 a untreaty:Paragraph ;
+  untreaty:blockText "to promote social progress and better standards of life in larger freedom,"@en ;
+  untreaty:partOrder 3 .
+  
+:PA2 a untreaty:Article ;
+  skos:prefLabel "AND FOR THESE ENDS"@en ;
+  untreaty:partOrder 1 ;
+  untreaty:hasPart :PA2P1 ;
+  untreaty:hasPart :PA2P2 ;
+  untreaty:hasPart :PA2P3 ;
+  untreaty:hasPart :PA2P4 ;
+  
+:PA2P1 a untreaty:Paragraph ;
+  untreaty:blockText "to practice tolerance and live together in peace with one another as good neighbours, and"@en ;
+  untreaty:partOrder 0 .
+
+:PA2P2 a untreaty:Paragraph ;  
+  untreaty:blockText "to unite our strength to maintain international peace and security, and"@en ;
+  untreaty:partOrder 1 .
+
+:PA2P3 a untreaty:Paragraph ;
+  untreaty:blockText "to ensure, by the acceptance of principles and the institution of methods, that armed force shall not be used, save in the common interest, and"@en ;
+  untreaty:partOrder 2 .
+
+:PA2P4 a untreaty:Paragraph ;
+  untreaty:blockText "to employ international machinery for the promotion of the economic and social advancement of all peoples,"@en ;
+  untreaty:partOrder 3 .
+
+:PA3 a untreaty:Article ;
+  skos:prefLabel "HAVE RESOLVED TO COMBINE OUR EFFORTS TO ACCOMPLISH THESE AIMS"@en ;
+  untreaty:partOrder 2 ;
+  untreaty:hasPart :PA3P1 .
+  
+:PA3P1 a untreaty:Paragraph ;
+  untreaty:blockText "Accordingly, our respective Governments, through representatives assembled in the city of San Francisco, who have exhibited their full powers found to be in good and due form, have agreed to the present Charter of the United Nations and do hereby establish an international organization to be known as the United Nations."@en .
+  untreaty:partOrder 0 .
+	
+:Chapter1 a untreaty:Chapter ;
+  skos:prefLabel "Chapter I"@en ;
+  skos:prefLabel "Chapitre I"@fr ;
+  untreaty:partOrder 1 ;
+  untreaty:hasPart :Article1 ;
+  untreaty:hasPart :Article2 .
+	
+:Article1 a untreaty:Article ;
+  skos:prefLabel "Article 1"@en ;
+  skos:prefLabel "Article 1"@fr ;
+  untreaty:partOrder 0 ;
+  untreaty:blockText "The Purposes of the United Nations are:"@en ;
+  untreaty:blockText "Les buts des Nations Unies sont les suivants :"@fr ;
+  untreaty:hasPart :A1P1 ;
+  untreaty:hasPart :A1P2 ;
+  untreaty:hasPart :A1P3 ;
+  untreaty:hasPart :A1P4 .
+	
+:Article2 a untreaty:Article ;
+  skos:prefLabel "Article 2"@en ;
+  skos:prefLabel "Article 2"@fr ;
+	
