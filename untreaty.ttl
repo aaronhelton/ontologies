@@ -118,7 +118,7 @@ untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
   untreaty:hasPart :PA2P1 ;
   untreaty:hasPart :PA2P2 ;
   untreaty:hasPart :PA2P3 ;
-  untreaty:hasPart :PA2P4 ;
+  untreaty:hasPart :PA2P4 .
   
 :PA2P1 a untreaty:Paragraph ;
   untreaty:blockText "to practice tolerance and live together in peace with one another as good neighbours, and"@en ;
