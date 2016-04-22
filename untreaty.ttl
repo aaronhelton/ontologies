@@ -171,5 +171,4 @@ untreaty:hasPart a rdfs:Property , owl:ObjectProperty ;
 	
 :Article2 a untreaty:Article ;
   skos:prefLabel "Article 2"@en ;
-  skos:prefLabel "Article 2"@fr ;
-	
+  skos:prefLabel "Article 2"@fr .
